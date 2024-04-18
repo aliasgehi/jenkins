@@ -1,3 +1,4 @@
+def alias
 pipeline {
     environment {
         ALIAS = true
@@ -18,7 +19,8 @@ pipeline {
                 ALIAS = ${env.ALIAS}
                 """
             }
-            
+            alias = load 'alias.groovy'
+            print(alias.randum())
         }
     }
     post {
