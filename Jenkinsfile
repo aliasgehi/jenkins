@@ -18,7 +18,9 @@ pipeline {
                 ${env.WORKSPACE}
                 ALIASA = ${env.ALIASA}
                 """
-                alias = load 'alias.groovy'
+                script {
+                    alias = load 'alias.groovy'
+                }
                 echo "${alias.randum()}"
             }
         }
