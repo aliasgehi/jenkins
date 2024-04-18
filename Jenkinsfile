@@ -20,8 +20,8 @@ pipeline {
                 """
                 script {
                     alias = load 'alias.groovy'
+                    print(alias.randum())
                 }
-                echo "${alias.randum()}"
             }
         }
     }
