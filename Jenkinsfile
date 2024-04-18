@@ -1,7 +1,7 @@
 def alias
 pipeline {
     environment {
-        ALIAS = true
+        ALIASA = true
     }
     agent any
     stages {
@@ -16,7 +16,7 @@ pipeline {
                 ${env.BUILD_ID}
                 ${env.NODE_NAME}
                 ${env.WORKSPACE}
-                ALIAS = ${env.ALIAS}
+                ALIASA = ${env.ALIASA}
                 """
                 alias = load 'alias.groovy'
                 echo "${alias.randum()}"
